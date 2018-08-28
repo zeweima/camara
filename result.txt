@@ -1,0 +1,52 @@
+camera:	2
+run time	0
+start time	1535492908.55
+end time	1535492921.75
+camera:	0
+run time	0
+start time	1535492908.55
+end time	1535492921.9
+camera:	2
+run time	0
+start time	1535493031.66
+end time	1535493044.59
+camera:	0
+run time	0
+start time	1535493031.66
+end time	1535493044.62
+camera:	0
+run time	0
+start time	1535494293.31
+end time	1535494307.33
+camera:	1
+run time	0
+start time	1535494293.31
+end time	1535494307.35
+camera:	2
+run time	0
+start time	1535494293.31
+end time	1535494307.35
+camera:	2
+run time	0
+start time	1535494389.41
+end time	1535494402.34
+camera:	0
+run time	0
+start time	1535494389.41
+end time	1535494402.34
+camera:	1
+run time	0
+start time	1535494389.41
+end time	1535494402.37
+camera:	0
+run time	0
+start time	1535494664.16
+end time	1535494750.92
+camera:	2
+run time	0
+start time	1535494664.16
+end time	1535494750.93
+camera:	1
+run time	0
+start time	1535494664.16
+end time	1535494750.94

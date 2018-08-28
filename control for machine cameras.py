@@ -8,9 +8,9 @@ import time
 import multiprocessing
 "modified from ImageFormat Control"
 
-NUM_IMAGES = 480 * 25   # number of images to grab ()
-OFFSET_Y = 500          # the offset of the picture in Y direction
-HIGHT = 700             # the height of the imagines
+NUM_IMAGES = 480 * 120   # number of images to grab ()
+OFFSET_Y = 800          # the offset of the picture in Y direction
+HIGHT = 260             # the height of the imagines
 delta = 10              # take pictures every delta minutes
 
 
@@ -181,7 +181,7 @@ def print_device_info(nodemap):
 def acquire_images(start_time, time_delta, cam, nodemap, nodemap_tldevice, index, runtimes):
     data = []
     #start_time = time.time()
-
+    f = open('result.txt','a')
     print '*** IMAGE ACQUISITION ***\n'
     try:
         result = True
@@ -222,6 +222,7 @@ def acquire_images(start_time, time_delta, cam, nodemap, nodemap_tldevice, index
         # Retrieve, convert, and save images
         while ((time.time()-start_time) <= time_delta + 2):
             wait = True
+        time1 = time.time()
         print time.time()-start_time
         for i in range(NUM_IMAGES):
             try:
@@ -231,7 +232,7 @@ def acquire_images(start_time, time_delta, cam, nodemap, nodemap_tldevice, index
                 if image_result.IsIncomplete():
                     print 'Image incomplete with image status %d ...' % image_result.GetImageStatus(), i
 
-                else:
+                elif i%4==0:
 
                     #  Print image information; height and width recorded in pixels
                     #
@@ -273,7 +274,13 @@ def acquire_images(start_time, time_delta, cam, nodemap, nodemap_tldevice, index
         # end_time = time.time()
         # delta = start_time - end_time
         # print "delta=", delta
-        print time.time()-start_time
+        time2 = time.time()
+        f.write('camera:\t' + str(index)+'\n')
+        f.write('run time\t' + str(runtimes) + '\n')
+        f.write('start time\t' + str(time1)+'\n')
+
+        f.write('end time\t' + str(time2)+'\n')
+        f.close()
         for ii in range(len(data)):
             #image_converted = data[ii].Convert(PySpin.PixelFormat_BayerGB8, PySpin.HQ_LINEAR)
 
@@ -287,7 +294,8 @@ def acquire_images(start_time, time_delta, cam, nodemap, nodemap_tldevice, index
 
             #width = data[ii].GetWidth()
             #height = data[ii].GetHeight()
-            print 'Grabbed Image %d, width = %d, height = %d' % (ii, 2048, 700), filename
+            if ii%100==0:
+                print 'Grabbed Image %d, width = %d, height = %d' % (ii, 2048, 700), filename
             # Save image
             #
             #  *** NOTES ***
