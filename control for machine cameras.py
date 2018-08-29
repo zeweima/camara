@@ -8,10 +8,10 @@ import time
 import multiprocessing
 "modified from ImageFormat Control"
 
-NUM_IMAGES = 480 * 120   # number of images to grab ()
-OFFSET_Y = 800          # the offset of the picture in Y direction
-HIGHT = 260             # the height of the imagines
-delta = 10              # take pictures every delta minutes
+NUM_IMAGES = 480 * 120      # number of images to grab ()
+OFFSET_Y = 800              # the offset of the picture in Y direction
+HIGHT = 260                 # the height of the imagines
+delta = 10                  # take pictures every delta minutes
 
 
 def configure_custom_image_settings(nodemap):

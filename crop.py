@@ -6,7 +6,7 @@ import glob
 import os
 path = "C:\\Users\\FlumeLab9\\Desktop\zma\\running test\\2\\1"
 filename = glob.glob(path+'\*.jpg')
-saving_folder = 'C:\\Users\\FlumeLab9\\Desktop\zma\\running test\\2\\1\\new'
+saving_folder = 'C:\\Users\\FlumeLab9\\Desktop\zma\\running test\\2\\1\\crop'
 if not os.path.exists(saving_folder):
     os.makedirs(saving_folder)
 for file in filename:
