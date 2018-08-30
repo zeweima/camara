@@ -1,3 +1,7 @@
+"""
+this script is used to draw trajectories without smoothing
+the input file is the csv file we get from tracking
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
