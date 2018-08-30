@@ -9,16 +9,19 @@ from PIL import ImageEnhance
 import glob
 import os
 
-path = "C:\\Users\\FlumeLab9\\Desktop\\zma\\running test\\2\\1"
+path = "Q:\\test\\2\\cali"
 filename = glob.glob(path+'\*.jpg')
-saving_folder = 'C:\\Users\\FlumeLab9\\Desktop\\zma\\running test\\2\\1\\new'
+saving_folder = 'Q:\\test\\2\\crop&change2'
 if not os.path.exists(saving_folder):
     os.makedirs(saving_folder)
 for file in filename:
     image = Image.open(file)
     image = image.convert('L')
-    box1 = (100, 0, 1000, 100)  # (x1, y1, x2, y2)
-    img = img.crop(box1)
+    # box1 = (409, 37, 1378, 141)  # (x1, y1, x2, y2) folder 1
+    # box1 = (98, 35, 2041, 149)  # (x1, y1, x2, y2) folder 0
+    # box1 = (138, 19, 1155, 135)  # (x1, y1, x2, y2) folder 2
+    box2 = (1206, 27, 1781, 135)  # (x1, y1, x2, y2) folder 2
+    image = image.crop(box2)
     threshold = 100
     table = []
     for j in range(256):

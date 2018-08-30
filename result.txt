@@ -50,3 +50,31 @@ camera:	1
 run time	0
 start time	1535494664.16
 end time	1535494750.94
+camera:	0
+run time	0
+start time	1535649869.32
+end time	1535649869.41
+camera:	0
+run time	0
+start time	1535650096.29
+end time	1535650096.39
+camera:	1
+run time	0
+start time	1535650096.29
+end time	1535650096.39
+camera:	2
+run time	0
+start time	1535650096.29
+end time	1535650096.39
+camera:	0
+run time	1
+start time	1535650216.28
+end time	1535650216.38
+camera:	2
+run time	1
+start time	1535650216.28
+end time	1535650216.38
+camera:	1
+run time	1
+start time	1535650216.28
+end time	1535650216.39

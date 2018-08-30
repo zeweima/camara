@@ -8,10 +8,10 @@ import time
 import multiprocessing
 "modified from ImageFormat Control"
 
-NUM_IMAGES = 480 * 120   # number of images to grab ()
-OFFSET_Y = 800          # the offset of the picture in Y direction
-HIGHT = 260             # the height of the imagines
-delta = 10              # take pictures every delta minutes
+NUM_IMAGES = 480 * 2      # number of images to grab ()
+OFFSET_Y = 800              # the offset of the picture in Y direction
+HIGHT = 260                 # the height of the imagines
+DELTA = 2                  # take pictures every delta minutes; I do not know what will happen if the time delta is smaller than saving time
 
 
 def configure_custom_image_settings(nodemap):
@@ -333,7 +333,7 @@ def run_single_camera(index, strat_time):
     while(True):
         time_now = time.time()
         delta = time_now - strat_time
-        time_delta = 3 + 60 * delta * j - 2           ###set time per round
+        time_delta = 3 + 60 * DELTA * j - 2           ###set time per round
         if(delta >= time_delta):
             note = str(index) + '-' + str(j) + '\n'
             try:
